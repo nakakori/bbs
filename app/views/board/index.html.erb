@@ -1,0 +1,7 @@
+<% provide(:title, "Top") %>
+<h1>トピック一覧</h1>
+<ul>
+  <% @board.each do |topic| %>
+    <li><%= link_to topic.title, board_show_path(topic.id) %></li>
+  <% end %>
+</ul>
